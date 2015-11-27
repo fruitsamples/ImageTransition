@@ -1,9 +1,7 @@
 ImageTransition
 ===============
 
-Demonstrates how to use Core Image's built-in transition filters and Core Animation's 
-built-in transition types to transition between images.  This sample accompanies the 
-Core Image Programming Guide, using "Core Image Filters" section.
+Demonstrates how to use Core Image's built-in transition filters and Core Animation's built-in transition types to transition between images.  This sample accompanies the Core Image Programming Guide, using "Core Image Filters" section.
 
 
 ===========================================================================
@@ -20,7 +18,6 @@ Mac OS X 10.6 Snow Leopard or later
 CHANGES FROM PREVIOUS VERSIONS:
 
 Version 1.1
-- Updated classes to use properties.
 - Project updated for Xcode 4.
 Version 1.0
 - First version.

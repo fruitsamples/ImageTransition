@@ -1,9 +1,9 @@
 /*
      File: MyWindowController.h
  Abstract: 
- Header file for this sample's main NSWindowController.
+ Sample's main NSWindowController.
  
-  Version: 1.0
+  Version: 1.1
  
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple
  Inc. ("Apple") in consideration of your agreement to the following
@@ -43,7 +43,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE
  POSSIBILITY OF SUCH DAMAGE.
  
- Copyright (C) 2010 Apple Inc. All Rights Reserved.
+ Copyright (C) 2011 Apple Inc. All Rights Reserved.
  
  */
 
@@ -57,13 +57,15 @@
 	NSImage     *donPedro2;
 	BOOL        curSlide1;	// flag that we are currently showing slide #1
 	
-	IBOutlet SlideshowView  *slideView;
-	IBOutlet NSPopUpButton  *transitionChoicePopup;
+    SlideshowView  *slideView;
+    NSPopUpButton  *transitionChoicePopup;
 }
+
+@property (nonatomic, copy) NSString *transitionStyle;
+@property (nonatomic, retain) IBOutlet SlideshowView* slideView;
+@property (nonatomic, retain) IBOutlet NSPopUpButton* transitionChoicePopup;
 
 - (IBAction)goTransitionAction:(id)sender;
 - (IBAction)transitionChoiceAction:(id)sender;
-
-@property (copy) NSString *transitionStyle;
 
 @end

@@ -1,9 +1,9 @@
 /*
      File: MyWindowController.m 
  Abstract: 
- Header file for this sample's main NSWindowController.
+ Sample's main NSWindowController.
   
-  Version: 1.0 
+  Version: 1.1 
   
  Disclaimer: IMPORTANT:  This Apple software is supplied to you by Apple 
  Inc. ("Apple") in consideration of your agreement to the following 
@@ -43,7 +43,7 @@
  STRICT LIABILITY OR OTHERWISE, EVEN IF APPLE HAS BEEN ADVISED OF THE 
  POSSIBILITY OF SUCH DAMAGE. 
   
- Copyright (C) 2010 Apple Inc. All Rights Reserved. 
+ Copyright (C) 2011 Apple Inc. All Rights Reserved. 
   
  */
 
@@ -55,6 +55,8 @@
 @implementation MyWindowController
 
 @synthesize transitionStyle;
+@synthesize slideView;
+@synthesize transitionChoicePopup;
 
 // -------------------------------------------------------------------------------
 //	awakeFromNib:
@@ -134,6 +136,21 @@
 {
     NSInteger idx = [transitionChoicePopup indexOfSelectedItem];
     self.transitionStyle = [transitionChoicePopup itemTitleAtIndex:idx];
+}
+
+// -------------------------------------------------------------------------------
+//	dealloc
+// -------------------------------------------------------------------------------
+- (void)dealloc
+{
+    [slideView release];
+    slideView = nil;
+    [transitionChoicePopup release];
+    transitionChoicePopup = nil;
+    [transitionStyle release];
+    transitionStyle = nil;
+    
+    [super dealloc];
 }
 
 @end
